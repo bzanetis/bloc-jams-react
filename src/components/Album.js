@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 
+
+
 class Album extends Component {
   constructor(props) {
      super(props);
@@ -39,10 +41,11 @@ class Album extends Component {
         if (this.state.isPlaying && isSameSong) {
           this.pause();
         } else {
-          if (!isSameSong) { this.setSong(song); } 
+          if (!isSameSong) { this.setSong(song); }
           this.play();
         }
     }
+
 
 
 
@@ -66,8 +69,10 @@ class Album extends Component {
            </colgroup>
            <tbody>
             {this.state.album.songs.map( (song, index) =>
-             <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+             <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.audioElement.play()} onMouseLeave={() => this.audioElement.pause()}>
               <td>{index += 1}</td>
+                <span className="ion-play"></span>
+                <span className="ion-pause"></span>
               <td>{song.title}</td>
               <td>{song.duration}</td>
              </tr>
