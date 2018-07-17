@@ -39,10 +39,12 @@ class Album extends Component {
         if (this.state.isPlaying && isSameSong) {
           this.pause();
         } else {
-          if (!isSameSong) { this.setSong(song); } 
+          if (!isSameSong) { this.setSong(song); }
           this.play();
         }
     }
+
+
 
 
 
@@ -67,7 +69,7 @@ class Album extends Component {
            <tbody>
             {this.state.album.songs.map( (song, index) =>
              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-              <td>{index += 1}</td>
+              <td onMouseEnter={<ion-icon name="play"></ion-icon>}>{index += 1} <span className="ion-play"></span></td>
               <td>{song.title}</td>
               <td>{song.duration}</td>
              </tr>
