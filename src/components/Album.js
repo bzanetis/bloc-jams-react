@@ -61,13 +61,7 @@ class Album extends Component {
     }
 
 
-<<<<<<< HEAD
-
-
-   render() {
-=======
 render() {
->>>>>>> assignment-7-audio-playback
      return (
        <section className="album">
        <section id="album-info">
@@ -86,14 +80,9 @@ render() {
            </colgroup>
            <tbody>
             {this.state.album.songs.map( (song, index) =>
-<<<<<<< HEAD
-             <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-              <td onMouseEnter={<ion-icon name="play"></ion-icon>}>{index += 1} <span className="ion-play"></span></td>
-=======
              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.setState({isHovered: index})} onMouseLeave={() => this.setState({isHovered: false})} key={index}>
 
               <td>{this.playPauseNumber(index)}</td>
->>>>>>> assignment-7-audio-playback
               <td>{song.title}</td>
               <td>{song.duration}</td>
              </tr>
