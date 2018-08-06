@@ -17,8 +17,8 @@ class Album extends Component {
        currentSong: album.songs[0],
        currentTime: 0,
        duration: album.songs[0].duration,
-       muted: 0,
-       volume: 80,
+       currentVolume: 0,
+       volume: 1,
        isPlaying: false,
        isHovered: false
     };
@@ -105,7 +105,7 @@ class Album extends Component {
 
     handleVolumeChange(e) {
        const newVolume = this.audioElement.volume * e.target.value;
-       this.audioElement.volume = newVolume;
+       this.audioElement.currentVolume = newVolume;
        this.setState({ volume: newVolume });
      }
 
@@ -122,6 +122,21 @@ class Album extends Component {
       }
 	   }
     }
+
+    formatTime(seconds) {
+    var minutes = 0;
+    if (seconds / 60 > 0) {
+        minutes = parseInt(seconds / 60, 10);
+        seconds = seconds % 60;
+    return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+  } else {
+    return ("-:--");
+  }
+}
+
+//     formatTime(seconds) {
+//     return Math.floor(seconds / 60) + ":" + (seconds % 60 ? seconds % 60 : '00')
+// }
 
 
 render() {
@@ -147,7 +162,7 @@ render() {
 
               <td>{this.playPauseNumber(index)}</td>
               <td>{song.title}</td>
-              <td>{song.duration}</td>
+              <td>{this.formatTime(song.duration)}</td>
              </tr>
             )}
            </tbody>
@@ -155,8 +170,8 @@ render() {
        <PlayerBar
         isPlaying={this.state.isPlaying}
         currentSong={this.state.currentSong}
-        currentTime={this.audioElement.currentTime}
-        duration={this.audioElement.duration}
+        currentTime={this.formatTime(this.audioElement.currentTime)}
+        duration={this.formatTime(this.audioElement.duration)}
         volume={this.audioElement.volume}
 
         handleSongClick={() => this.handleSongClick(this.state.currentSong)}
