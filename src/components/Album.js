@@ -142,6 +142,8 @@ class Album extends Component {
 
 
 render() {
+  console.log(this.props.currentTime + " divided by " + this.props.duration + " is " + (this.props.currentTime / this.props.duration));
+  console.log(this.audioElement);
      return (
        <section className="album">
        <section id="album-info">
