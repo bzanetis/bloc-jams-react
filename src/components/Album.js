@@ -142,8 +142,7 @@ class Album extends Component {
 
 
 render() {
-  console.log(this.props.currentTime + " divided by " + this.props.duration + " is " + (this.props.currentTime / this.props.duration));
-  console.log(this.audioElement);
+
      return (
        <section className="album">
        <section id="album-info">
@@ -175,8 +174,10 @@ render() {
         isPlaying={this.state.isPlaying}
         currentSong={this.state.currentSong}
         formattedTime={this.formatTime(this.audioElement.currentTime)}
+        formattedDuration={this.formatTime(this.audioElement.duration)}
         currentTime={this.audioElement.currentTime}
-        duration={this.formatTime(this.audioElement.duration)}
+        //duration={this.formatTime(this.audioElement.duration)}
+        duration={this.audioElement.duration}
         volume={this.audioElement.volume}
 
         handleSongClick={() => this.handleSongClick(this.state.currentSong)}
