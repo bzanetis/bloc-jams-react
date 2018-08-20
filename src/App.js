@@ -11,26 +11,24 @@ class App extends Component {
     return (
       <div className="App">
 
-        <header>
-         <div className="masthead mb-auto">
+      <div className="container-fluid">
+       <header className="masthead mb-auto">
+        <div className="inner">
+          <h2 className="masthead-brand">Bloc Jams</h2>
           <nav className="nav nav-masthead justify-content-center">
-           <Link to='/'>Landing</Link>
-           <Link to='/library'>Library</Link>
+            <a className="nav-link active" href='/'>Landing</a>
+            <a className="nav-link active" href='/library'>Library</a>
           </nav>
-
-          <div className="inner">
-           <h1 className="masthead-brand">Bloc Jams</h1>
-          </div>
-         </div>
+        </div>
         </header>
 
-        <main className= "text-center">
-         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
-         </div>
-        </main>
+
+       </div>
       </div>
     );
   }
