@@ -1,5 +1,18 @@
 
-body {
+section {
   text-align: center;
-  border-top-width: thick;
+  border-top-width: medium;
+  border-bottom: 10%;
+  background-color: #0083b3;
+  background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+  font-family: sans-serif;
+
+}
+
+.point-one {
+  text-align: left;
+}
+
+.point-three {
+  text-align: right;
 }

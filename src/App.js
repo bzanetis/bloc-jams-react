@@ -9,28 +9,26 @@ import Album from './components/Album';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
       <div className="container-fluid">
-       <header className="masthead mb-auto">
+
+      <header className="masthead mb-auto container">
         <div className="inner">
-          <h2 className="masthead-brand">Bloc Jams</h2>
-          <nav className="nav nav-masthead justify-content-center">
+          <h2 className="masthead-brand row">Bloc Jams</h2>
+          <nav className="nav nav-masthead justify-content-center row">
             <a className="nav-link active" href='/'>Landing</a>
             <a className="nav-link active" href='/library'>Library</a>
           </nav>
          </div>
         </header>
-      </div>
 
-      <div className="container-fluid">
+      <div className="row">
         <div className="App-routes">
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </div>
        </div>
-      </div>
+     </div>
     );
   }
 }

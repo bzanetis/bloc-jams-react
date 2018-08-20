@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -23,7 +24,8 @@
 }
 
 .App-routes {
-  margin-top: 20%
+  margin-top: 10%;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
