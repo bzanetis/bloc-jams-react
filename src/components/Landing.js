@@ -1,8 +1,9 @@
 import React from 'react';
+import './Landing.css';
 
 
 const Landing = () => (
-<main role="main" className="inner cover">
+<body>
 
 
     <h1 className="cover-heading">Turn the music up!</h1>
@@ -21,7 +22,7 @@ const Landing = () => (
    </div>
  </section>
 
- </main>
+ </body>
 );
 
 export default Landing;

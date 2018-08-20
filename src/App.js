@@ -19,15 +19,16 @@ class App extends Component {
             <a className="nav-link active" href='/'>Landing</a>
             <a className="nav-link active" href='/library'>Library</a>
           </nav>
-        </div>
+         </div>
         </header>
+      </div>
 
-
-
+      <div className="container-fluid">
+        <div className="App-routes">
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
-
+        </div>
        </div>
       </div>
     );
