@@ -3,7 +3,7 @@ import './Landing.css';
 
 
 const Landing = () => (
-<section>
+<section className="landing-section">
 
 
     <h1 className="cover-heading">Turn the music up!</h1>

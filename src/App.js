@@ -21,7 +21,7 @@ class App extends Component {
          </div>
         </header>
 
-      <div className="row">
+      <div className="row width-100">
         <div className="App-routes">
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />

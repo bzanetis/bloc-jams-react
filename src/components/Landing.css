@@ -1,18 +1,26 @@
 
-section {
+.landing-section {
   text-align: center;
   border-top-width: medium;
   border-bottom: 10%;
   background-color: #0083b3;
   background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
   font-family: sans-serif;
-
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .point-one {
-  text-align: left;
+  text-align: center;
+  width: 45%;
+
 }
 
 .point-three {
-  text-align: right;
+  text-align: center;
+  width: 45%;
+  float: right;
 }
